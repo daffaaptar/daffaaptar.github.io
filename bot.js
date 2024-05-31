@@ -34,8 +34,7 @@ bot.on("inline_query", function (iq) {
 });
 
 server.use(express.static(path.join(__dirname, 'public')));
-
-server.get("/highscore/:score", function (req, res, next) {
+server.get("/highscore/:score", async function (req, res, next) {
     if (!Object.hasOwnProperty.call(queries, req.query.id)) return next();
     let query = queries[req.query.id];
     let options;
@@ -49,8 +48,18 @@ server.get("/highscore/:score", function (req, res, next) {
             inline_message_id: query.inline_message_id
         };
     }
-    bot.setGameScore(query.from.id, parseInt(req.params.score), options, function (err, result) { });
+    const score = parseInt(req.params.score);
+    bot.setGameScore(query.from.id, score, options, function (err, result) {
+        if (err) {
+            console.error("Error setting game score:", err);
+            return res.sendStatus(500);
+        }
+        // Mengirim pesan dengan highscore kepada pengguna
+        bot.sendMessage(query.from.id, `Congratulations! Your new highscore is ${score}.`);
+        res.sendStatus(200);
+    });
 });
+
 server.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
