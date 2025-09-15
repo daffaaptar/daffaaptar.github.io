@@ -1,125 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daffaaptar</title>
-    <link rel="stylesheet" href="style.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daffaaptar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Mona Sans", sans-serif;
+    }
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.2;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-black text-white md:px-[px] lg:px-[350px] sm:px-10">
 
-     <video class="bg-video" autoplay loop muted playsinline>
-        <source src="bg-vid.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-      <script>
-    const video = document.getElementById("bg-video");
-    video.playbackRate = 0.2; 
-  </script>
-    <div class="header">
-        <img src="https://avatars.githubusercontent.com/u/139119532?s=400&u=798114ff58f5f8889d96dbae74467a3faaeef579&v=4" alt="Daffaaptar" width="120" height="120">
-        <div class="header-text">
-            <h1>Hi, I'm Daffaaptar 👋</h1>
-            <p>Software Engineer with a strong interest in building products that make a real impact. With experience in Web Development, UI/UX, and Cloud Databases.
-        </p>
+  <!-- Background video -->
+  <video class="bg-video" autoplay loop muted playsinline>
+    <source src="bg-vid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Header -->
+  <div class="flex justify-center items-center gap-5 mt-24 mb-10">
+    <img class="rounded-full w-28 h-28 ml-4" src="https://avatars.githubusercontent.com/u/139119532?s=400&u=798114ff58f5f8889d96dbae74467a3faaeef579&v=4" alt="Daffaaptar">
+    <div>
+      <h1 class="md:text-4xl text-3xl font-bold">Hi, I'm Daffaaptar 👋</h1>
+      <p class="text-gray-400 mr-4 md:text-xs text-[8px] mt-2">
+        Software Engineer with a strong interest in building products that make a real impact.
+        With experience in Web Development, UI/UX, and Cloud Databases.
+      </p>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="mx-5 mb-10">
+    <h2 class="text-xl font-bold mb-2">About</h2>
+    <p class="text-gray-400 text-sm leading-relaxed">
+      I am a <a class="font-bold underline text-white">software engineer</a> with a passion for building products that solve real-world problems.
+      I have experience in Web Development, UI/UX, and Cloud Databases.
+      I am also an <a class="font-bold underline text-white">entrepreneur</a> and have founded several startups.
+    </p>
+  </div>
+
+  <!-- Internship Experience -->
+  <div class="mx-5 mb-10">
+    <h2 class="text-xl font-bold mb-4">Internship Experience</h2>
+
+    <!-- Internship Item -->
+    <div class="flex justify-between items-center pb-3">
+      <div class="flex items-center">
+        <img class="rounded-full w-10 h-10 mr-3" src="https://media.licdn.com/dms/image/v2/C560BAQHgNNhRvu1wzQ/company-logo_200_200/company-logo_200_200/0/1673499183115?e=2147483647&v=beta&t=qtTaGJXDxTqhDhgLUzQXrjfIRT15j7O6kvwcQRxsh8o" alt="PT. Gunung Amal Solution">
+        <div>
+          <h1 class="text-sm font-bold mb-1">PT. Gunung Amal Solution</h1>
+          <p class="text-gray-400 text-xs">Software Engineer Intern</p>
+        </div>
+      </div>
+      <div>
+        <p class="text-[11px] text-gray-500">June 20xx - August 20xx</p>
+      </div>
+    </div>
+
+    <div class="flex justify-between items-center pb-3">
+      <div class="flex items-center">
+        <img class="rounded-full w-10 h-10 mr-3" src="https://e7.pngegg.com/pngimages/763/1023/png-clipart-bandung-institute-of-technology-logo-emblem-organization-brand-bandung-institute-of-technology-logo-thumbnail.png" alt="ITB">
+        <div>
+          <h1 class="text-sm font-bold mb-1">Direktorat Teknologi Informasi</h1>
+          <p class="text-gray-400 text-xs">IT Support Intern</p>
+        </div>
+      </div>
+      <div>
+        <p class="text-[11px] text-gray-500">June 20xx - August 20xx</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="mx-5 mb-10">
+    <h2 class="text-xl font-bold mb-4">Education</h2>
+
+    <div class="flex justify-between items-center pb-3">
+      <div class="flex items-center">
+        <img class="rounded-full w-10 h-10 mr-3" src="https://yt3.googleusercontent.com/ytc/AIdro_lQkeS2iJ9vGUWTt2gbIa2nroFjDk6wCooYEZsfQ5DQKg=s900-c-k-c0x00ffffff-no-rj" alt="SMK">
+        <div>
+          <h1 class="text-sm font-bold mb-1">SMK SUMATRA 40</h1>
+          <p class="text-gray-400 text-xs">Rekayasa Perangkat Lunak</p>
+        </div>
+      </div>
+      <div>
+        <p class="text-[11px] text-gray-500">June 20xx - August 20xx</p>
+      </div>
+    </div>
+
+    <div class="flex justify-between items-center pb-3">
+      <div class="flex items-center">
+        <img class="rounded-full w-10 h-10 mr-3" src="https://www.widyatama.ac.id/wp-content/uploads/2015/07/widyatama.jpg" alt="Widyatama">
+        <div>
+          <h1 class="text-sm font-bold mb-1">Universitas Widyatama</h1>
+          <p class="text-gray-400 text-xs">Teknik Informatika</p>
+        </div>
+      </div>
+      <div>
+        <p class="text-[11px] text-gray-500">June 20xx - Present</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="mx-5 mb-10">
+    <h2 class="text-xl font-bold mb-4">Skills</h2>
+    <div class="flex flex-wrap gap-2">
+      <span class="px-3 py-1 rounded bg-white text-black text-sm font-semibold">HTML</span>
+      <span class="px-3 py-1 rounded bg-white text-black text-sm font-semibold">CSS</span>
+      <span class="px-3 py-1 rounded bg-white text-black text-sm font-semibold">Tailwind</span>
+      <span class="px-3 py-1 rounded bg-white text-black text-sm font-semibold">C#</span>
+      <span class="px-3 py-1 rounded bg-white text-black text-sm font-semibold">Pascal</span>
+      <span class="px-3 py-1 rounded bg-white text-black text-sm font-semibold">SQL</span>
+      <span class="px-3 py-1 rounded bg-white text-black text-sm font-semibold">Node.js</span>
+      <span class="px-3 py-1 rounded bg-white text-black text-sm font-semibold">Javascript</span>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div class="mx-5  mb-10">
+    <h1 class="text-center text-4xl font-bold mb-2">Check out my latest work</h1>
+    <p class="text-center text-gray-400 mb-6">
+      I've worked on a variety of projects, from simple websites to complex web applications.
+      Here are a few of my favorites.
+    </p>
+    <div class="my-8 grid md:grid-cols-2 grid-cols-1 gap-6">
+        <div class="border border-white rounded-lg">
+          <!-- Financial Statement -->
+            <div>
+                <img src="asset/griya.png" alt="" class="w-full h-48 rounded-t-lg object-cover">
+            </div>
+            <h1 class="font-bold ml-3 text-2xl md:text-lg mt-4">Financial Statements</h1>
+            <p class="text-gray-400 text-xs ml-3 mt-2">A simple financial statements web app built with Vite, Typescript, and Supabase.</p>
+            <div class="flex flex-wrap gap-1 mt-4 mb-4 ml-3">
+                <span class="px-2 py-1 rounded bg-white text-black text-xs font-semibold">Vite</span>
+                <span class="px-2 py-1 rounded bg-white text-black text-xs font-semibold">Typescript</span>
+                <span class="px-2 py-1 rounded bg-white text-black text-xs font-semibold">Node.js</span>
+                <span class="px-2 py-1 rounded bg-white text-black text-xs font-semibold">Supabase</span>
+            </div>
+        </div>
+        <!-- Cashier App -->
+        <div class="border border-white rounded-lg">
+            <div>
+                <img src="asset/morkopi.png" alt="" class="w-full h-48 rounded-t-lg object-cover">
+            </div>
+            <h1 class="font-bold ml-3 text-2xl md:text-lg mt-4">Cashier System</h1>
+            <p class="text-gray-400 text-xs ml-3 mt-2">A simple cashier web app built with HTML, CSS, and PHP.</p>
+            <div class="flex flex-wrap gap-1 mt-4 mb-4 ml-3">
+                <span class="px-2 py-1 rounded bg-white text-black text-xs font-semibold">HTML</span>
+                <span class="px-2 py-1 rounded bg-white text-black text-xs font-semibold">PHP</span>
+                <span class="px-2 py-1 rounded bg-white text-black text-xs font-semibold">SQL</span>
+                <span class="px-2 py-1 rounded bg-white text-black text-xs font-semibold">Vanilla CSS</span>
+            </div>
         </div>
     </div>
-    <div class="about-me">
-        <h2>About</h2>
-        <p>I am a <a>software engineer</a> with a passion for building products that solve real-world problems. I have experience in Web Development, UI/UX, and Cloud Databases. I am also an <a>entrepreneur</a> and have founded several startups.</p>
-    </div>
-    <div class="internship-experience">
-        <h2>Internship Experience</h2>
-        <div class="internship-item">
-            <div class="internship-left">
-            <img src="https://media.licdn.com/dms/image/v2/C560BAQHgNNhRvu1wzQ/company-logo_200_200/company-logo_200_200/0/1673499183115?e=2147483647&v=beta&t=qtTaGJXDxTqhDhgLUzQXrjfIRT15j7O6kvwcQRxsh8o" alt="Daffaaptar" width="40" height="40">
-            <div class="internship-text">
-                <h1>PT. Gunung Amal Solution </h1>
-                <p>Software Engineer Intern</p>
-            </div>
-            </div>
+  </div>
 
-            <div class="internship-duration">
-                <p>June 20xx - August 20xx</p>
-            </div>
-        </div>
+  <!-- Contact -->
+  <div class="mx-5 my-32 mb-10">
+    <h1 class="text-center text-5xl font-bold">Get in touch</h1>
+    <p class="text-center text-gray-400 mb-6 pt-2">
+      I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+      Feel free to reach out to me!
+    </p>
+    <div class="flex justify-center gap-4">
+      <a href="https://www.linkedin.com/in/daffa-apta-pratama-71517830a/" target="_blank" class="px-4 py-2 bg-white font-bold text-black rounded hover:bg-gray-200 transition">LinkedIn</a>
+      <a href="https://instagram.com/daffaaptar" target="_blank" class="px-4 py-2 bg-white font-bold text-black rounded hover:bg-gray-200 transition">Instagram</a>
+      <a href="https://www.linkedin.com/in/daffaaptar/" target="_blank" class="px-4 py-2 bg-white font-bold text-black rounded hover:bg-gray-200 transition">Whatsapp</a>
+  </div>
 
-        <div class="internship-item">
-            <div class="internship-left">
-            <img src="https://e7.pngegg.com/pngimages/763/1023/png-clipart-bandung-institute-of-technology-logo-emblem-organization-brand-bandung-institute-of-technology-logo-thumbnail.png" alt="Daffaaptar" width="40" height="40">
-            <div class="internship-text">
-                <h1>Direktorat Teknologi Informasi </h1>
-                <p>IT Support</p>
-            </div>
-            </div>
-
-            <div class="internship-duration">
-                <p>June 20xx - August 20xx</p>
-            </div>
-        </div>
-    </div>
-    
-     <div class="internship-experience">
-        <h2>Education</h2>
-        <div class="internship-item">
-            <div class="internship-left">
-            <img src="https://yt3.googleusercontent.com/ytc/AIdro_lQkeS2iJ9vGUWTt2gbIa2nroFjDk6wCooYEZsfQ5DQKg=s900-c-k-c0x00ffffff-no-rj" alt="Daffaaptar" width="40" height="40">
-            <div class="internship-text">
-                <h1>SMK SUMATRA 40 </h1>
-                <p>Rekayasa Perangkat Lunak</p>
-            </div>
-            </div>
-
-            <div class="internship-duration">
-                <p>June 20xx - August 20xx</p>
-            </div>
-        </div>
-
-        <div class="internship-item">
-            <div class="internship-left">
-            <img src="https://www.widyatama.ac.id/wp-content/uploads/2015/07/widyatama.jpg" alt="Daffaaptar" width="40" height="40">
-            <div class="internship-text">
-                <h1>Universitas Widyatama </h1>
-                <p>Teknik Informatika</p>
-            </div>
-            </div>
-
-            <div class="internship-duration">
-                <p>June 20xx - Until Now</p>
-            </div>
-        </div>
-    </div>
-    <div class="skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <div class="skills-card">
-                <span class="skill">HTML</span>
-            </div>
-            <div class="skills-card">
-                <span class="skill">CSS</span>
-            </div>
-            <div class="skills-card">
-                <span class="skill">Tailwind</span>
-            </div>
-            <div class="skills-card">
-                <span class="skill">C#</span>
-            </div>
-            <div class="skills-card">
-                <span class="skill">Pascal</span>
-            </div>
-            <div class="skills-card">
-                <span class="skill">SQL</span>
-            </div>
-            <div class="skills-card">
-                <span class="skill">Node.js</span>
-            </div>
-            <div class="skills-card">
-                <span class="skill">Javascript</span>
-            </div>
-        </div>
-    </div>
+  <!-- Footer -->
+   <div>
+    <p class="text-center text-gray-500 text-xs py-2 mt-20">Created by Daffaaptar · Inspired by Magic UI</p>
+   </div>
 </body>
 </html>
